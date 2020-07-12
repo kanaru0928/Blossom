@@ -1,0 +1,117 @@
+.select{
+    text-align: center;
+    margin: 15px auto;
+    //width: 20em;
+}
+
+.goback{
+    display: inline;
+    position: fixed;
+    margin: 10px;
+    right: 20%;
+    background-color: #C81EF1;
+    border-color: #C81EF1;
+    z-index: 10;
+    &:hover{
+        color:#C81EF1;
+        i{
+            color: #C81EF1;
+        }
+    }
+}
+
+div.main_form{
+    position: relative;
+    height: 100%;
+    top: 5em;
+    
+    .word_area_parent{
+        margin: 0 auto;
+        width: 60%;
+        height: 40vh;
+        
+        text-align: center;
+        vertical-align: middle;
+        div{
+            height: 100%;
+            display: inline-block;
+            i, p{
+                display: inline;
+            }
+            i{
+                font-size: 28pt;
+            }
+            &#left{
+                float:left;
+            }
+            &.word_area{
+                border-radius: 10px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                //vertical-align: middle;
+                //margin: 0;
+                width: 80%;
+                max-width: 80%;
+                box-shadow: 0 0 5px 0 gray;
+                .word_area_child{
+                    display: inline;
+                    height: unset;
+                    flex:1;
+                    p{
+                        font-size: 4vw;
+                        font-family: 'M PLUS Rounded 1c';
+                        font-weight: 500;
+                        &#japanese{
+                            font-size: 3vw;
+                        }
+                        &#word_red{
+                            color: rgb(253, 52, 52);
+                        }
+                    }
+                }
+            }
+            &#right{
+                float: right;
+            }
+
+            &.arrow{
+                line-height: 40vh;
+                width:8%;
+                &:hover{
+                    background-color: #dfdfdf;
+                }
+                &.disable{
+                    i{
+                        color: darkgray;
+                    }
+                    &:hover{
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .show_ans_parent{
+        margin:0 auto;
+        width: 60%;
+        display: block;
+        text-align: center;
+        p{
+            font-size: 32pt;
+            font-weight: 500;
+            display: inline;
+            &.next{
+                font-family: 'M PLUS Rounded 1c';
+                color: rgb(253, 52, 52);
+                font-weight: 700;
+                font-size: 48pt;
+            }
+        }
+        input{
+            font-size: 18pt;
+            width: 15em;
+        }
+    }
+}

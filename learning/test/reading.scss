@@ -1,0 +1,199 @@
+.select{
+    text-align: center;
+    margin: 15px auto;
+    //width: 20em;
+    .switch{
+        display: inline-block;
+        position: relative;
+        font-size: 24pt;
+        font-weight: 400;
+        text-decoration: none;
+        color: #DA2BEE;
+        text-align: center;
+    }
+}
+
+.goback{
+    display: inline;
+    position: fixed;
+    margin: 10px;
+    right: 20%;
+    background-color: #C81EF1;
+    border-color: #C81EF1;
+    z-index: 10;
+    &:hover{
+        color:#C81EF1;
+        i{
+            color: #C81EF1;
+        }
+    }
+}
+
+div.main_form{
+    position: relative;
+    height: 100%;
+    
+    .word_area_parent{
+        margin: 0 auto;
+        width: 60%;
+        height: 40vh;
+        text-align: center;
+        div{
+            height: 100%;
+            bottom:0;
+            display: inline-block;
+            i, p{
+                vertical-align: middle;
+                display: inline;
+            }
+            i{
+                line-height: 40vh;
+                font-size: 28pt;
+            }
+            &#left{
+                float:left;
+            }
+            &.word_area{
+                display: inline-flex;
+                z-index: 0;
+                align-items: center;
+                border-radius: 10px;
+                margin: 0 auto;
+                width: 80%;
+                box-shadow: 0 0 5px 0 gray;
+                .word_area_child{
+                    flex:1;
+                    display: inline;
+                    height: unset;
+                    p{
+                        position: relative;
+                        font-size: 4vw;
+                        font-family: 'M PLUS Rounded 1c';
+                        word-wrap: break-word;
+                        max-width: 100%;
+                        font-weight: 500;
+                    }
+                }
+                i{
+                    position: absolute;
+                    font-size: 30vh;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;
+                    opacity: 0.7;
+                    &.fa-circle{
+                        color: red;
+                        display: none;
+                    }
+                    &.fa-times{
+                        color: blue;
+                        display: none;
+                    }
+                }
+            }
+            &#right{
+                float: right;
+            }
+
+            &.arrow{
+                width:8%;
+                &:hover{
+                    background-color: #dfdfdf;
+                }
+                &.disable{
+                    i{
+                        color: darkgray;
+                    }
+                    &:hover{
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .show_ans_parent{
+        margin:1em auto;
+        width: 60%;
+        display: block;
+        table{
+            margin: 0 auto;
+            tr{
+                td{
+                    //border: solid 1px black;
+                    width: 20%;
+                    height: 4em;
+                    padding: 3px 10px;
+                    text-align: center;
+                    a{
+                        display: block;
+                        font-size: 18pt;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+.overlay{
+    margin: 5%;
+    position: fixed;
+    display: none;
+    width: calc(100vw - 10%);
+    height: calc(80vh - 10%);
+    background: rgba($color: white, $alpha: .8);
+    border: solid 5px #4B40EB;
+    border-radius: 7px;
+    top: 0;
+    left:0;
+    z-index: 150;
+    *{
+        //color: white;
+    }
+    .main_form{
+        margin: 5em 20vw;
+        h2{
+            font-size: 30pt;
+        }
+        .result{
+            text-align: center;
+            >p{
+                font-family: 'M PLUS Rounded 1c';
+                font-size: 48pt;
+                font-weight: 700;
+            }
+            .updated{
+                display: inline-block;
+                margin: 10px;
+                weight: 10em;
+                p{
+                    font-size: 24pt;
+                    padding-bottom: 4px;
+                }
+                &.got_parent{
+                    margin-right: 5%;
+                }
+                &.wrong_parent{
+                    margin-left: 5%;
+                }
+                .got{
+                    border-bottom: solid 1px limegreen;
+                }
+                .wrong{
+                    border-bottom: solid 1px red;
+                }
+                #wrong_word, #got_word{
+                    font-family: 'M PLUS Rounded 1c';
+                    font-weight: 500;
+                    font-size: 32pt;
+                }
+            }
+        }
+        .btn1{
+            float: right;
+            display: inline-block;
+        }
+    }
+}

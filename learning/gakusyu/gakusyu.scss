@@ -1,0 +1,30 @@
+.list_parent{
+    position: absolute;
+    left:0;
+    right:0;
+    margin: auto;
+    table.list{
+        margin: 0 auto;
+        border-collapse: collapse;
+        tr{
+            &:nth-child(odd){
+                background: whitesmoke;
+            }
+            td{
+                &.subtitle{
+                    font-size:24pt;
+                    width: 6em;
+                    &.custom{
+                        color: rgb(136, 0, 95);
+                    }
+                }
+                .btn1{
+                    margin:6px;
+                }
+                text-decoration: none;
+                list-style: none;
+                padding: 5px;
+            }
+        }
+    }
+}

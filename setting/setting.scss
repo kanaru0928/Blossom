@@ -1,0 +1,94 @@
+.main_form{
+    margin-top: 10px;
+}
+
+.fukusyu, .word_list{
+    padding-left: 5vw;
+    position: relative;
+    display:inline-block;
+
+    h2{
+        font-size: 22pt;
+        display: inline;
+        vertical-align: top;
+    }
+    .content{
+        vertical-align: top;
+        display: inline-block;
+        margin-top: 3px;
+    }
+    .note{
+        text-indent:15em;
+        color: red;
+        font-size: 12pt;
+        padding-top: 0;
+    }
+}
+
+.notice_setting{
+    position: absolute;
+    margin: auto;
+    display: block;
+    width: 60%;
+}
+
+.review_time{
+    font-size: 18pt;
+    display: inline-block;
+    &.after_test{
+        width: 3em;
+    }
+    &.study{
+        width: 2em;
+    }
+}
+
+p{
+    font-size: 18pt;
+}
+
+.subtitle{
+    display: inline-block;
+}
+
+.review_time:invalid{
+    border-color: red;
+}
+
+.word_list{
+    .list_parent{
+        display: flex;
+        .list{
+            margin: 5px;
+            p{
+                font-size: 20pt;
+            }
+            display: inline-block;
+            select{
+                option::selection{
+                    background: violet;
+                }
+                width: 10em;
+                font-size: 16pt;
+            }
+            &.edit{
+                margin-bottom: 20pt;
+                input{
+                    font-size: 18pt;
+                    display: block;
+                    margin: 5px 0;
+                }
+            }
+            i{
+                font-size: 20pt;
+                margin: 3px;
+                margin-top: 10px;
+                cursor: pointer;
+                &:disabled{
+                    color: #aaa;
+                }
+            }
+        }
+    }
+}
+

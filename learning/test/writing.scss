@@ -1,0 +1,192 @@
+.select{
+    text-align: center;
+    margin: 15px auto;
+    //width: 20em;
+}
+
+.goback{
+    display: inline;
+    position: fixed;
+    margin: 10px;
+    right: 20%;
+    background-color: #C81EF1;
+    border-color: #C81EF1;
+    z-index: 10;
+    &:hover{
+        color:#C81EF1;
+        i{
+            color: #C81EF1;
+        }
+    }
+}
+
+div.main_form{
+    position: relative;
+    height: 100%;
+    top: 5em;
+    
+    .word_area_parent{
+        margin: 0 auto;
+        width: 60%;
+        height: 40vh;
+        
+        text-align: center;
+        vertical-align: middle;
+        div{
+            height: 100%;
+            display: inline-block;
+            i, p{
+                display: inline;
+            }
+            i{
+                line-height: 40vh;
+                font-size: 28pt;
+            }
+            &#left{
+                float:left;
+            }
+            &.word_area{
+                border-radius: 10px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                //vertical-align: middle;
+                //margin: 0;
+                width: 80%;
+                max-width: 80%;
+                box-shadow: 0 0 5px 0 gray;
+                vertical-align: middle;
+                .word_area_child{
+                    display: inline;
+                    height: unset;
+                    flex:1;
+                    p{
+                        font-size: 4vw;
+                        font-family: 'M PLUS Rounded 1c';
+                        font-weight: 500;
+                        &#japanese{
+                            font-size: 3vw;
+                        }
+                        &#word_red{
+                            color: rgb(253, 52, 52);
+                        }
+                    }
+                }
+                i{
+                    position: absolute;
+                    font-size: 30vh;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;
+                    opacity: 0.7;
+                    &.fa-circle{
+                        color: red;
+                        display: none;
+                    }
+                    &.fa-times{
+                        color: blue;
+                        display: none;
+                    }
+                }
+            }
+            &#right{
+                float: right;
+            }
+
+            &.arrow{
+                line-height: 40vh;
+                width:8%;
+                &:hover{
+                    background-color: #dfdfdf;
+                }
+                &.disable{
+                    i{
+                        color: darkgray;
+                    }
+                    &:hover{
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .show_ans_parent{
+        margin:1em auto;
+        width: 60%;
+        display: block;
+        text-align: center;
+        *{
+            vertical-align: middle;
+            display: inline;
+        }
+        input{
+            font-size: 18pt;
+            width: 15em;
+        }
+    }
+}
+
+.overlay{
+    margin: 5%;
+    position: fixed;
+    display: none;
+    width: calc(100vw - 10%);
+    height: calc(80vh - 10%);
+    background: rgba($color: white, $alpha: .8);
+    border: solid 5px #4B40EB;
+    border-radius: 7px;
+    top: 0;
+    left:0;
+    z-index: 150;
+    *:not(.btn1 *){
+        box-shadow: 0 0 5px 0 white;
+    }
+    .main_form{
+        margin: 5em 20vw;
+        h2{
+            font-size: 30pt;
+        }
+        .result{
+            text-align: center;
+            >p{
+                font-family: 'M PLUS Rounded 1c';
+                font-size: 48pt;
+                font-weight: 700;
+            }
+            .updated{
+                display: inline-block;
+                margin: 10px;
+                weight: 10em;
+                p{
+                    font-size: 24pt;
+                    padding-bottom: 4px;
+                }
+                &.got_parent{
+                    margin-right: 5%;
+                }
+                &.wrong_parent{
+                    margin-left: 5%;
+                }
+                .got{
+                    border-bottom: solid 1px limegreen;
+                }
+                .wrong{
+                    border-bottom: solid 1px red;
+                }
+                #wrong_word, #got_word{
+                    font-family: 'M PLUS Rounded 1c';
+                    font-weight: 500;
+                    font-size: 32pt;
+                }
+            }
+        }
+        .btn1{
+            float: right;
+            display: inline-block;
+        }
+    }
+}
+

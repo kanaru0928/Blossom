@@ -1,0 +1,128 @@
+.select{
+    text-align: center;
+    margin: 15px auto;
+    //width: 20em;
+    .switch{
+        display: inline-block;
+        position: absolute;
+        font-size: 24pt;
+        font-weight: 400;
+        text-decoration: none;
+        &.en_jp{
+            left: calc(45% - 3em);
+            box-shadow: black;
+        }
+        &.jp_en{
+            right: calc(45% - 3em);
+        }
+    }
+}
+
+.goback{
+    display: inline;
+    position: fixed;
+    margin: 10px;
+    right: 20%;
+    background-color: #C81EF1;
+    border-color: #C81EF1;
+    z-index: 10;
+    &:hover{
+        color:#C81EF1;
+        i{
+            color: #C81EF1;
+        }
+    }
+}
+
+div.main_form{
+    position: relative;
+    height: 100%;
+    top: 5em;
+    
+    .word_area_parent{
+        margin: 0 auto;
+        width: 60%;
+        height: 40vh;
+        text-align: center;
+        div{
+            height: 100%;
+            bottom:0;
+            display: inline-block;
+            i, p{
+                vertical-align: middle;
+                display: inline;
+            }
+            i{
+                line-height: 40vh;
+                font-size: 28pt;
+            }
+            &#left{
+                float:left;
+            }
+            &.word_area{
+                display: inline-flex;
+                z-index: 0;
+                align-items: center;
+                border-radius: 10px;
+                margin: 0 auto;
+                width: 80%;
+                box-shadow: 0 0 5px 0 gray;
+                p{
+                    position: relative;
+                    font-size: 4vw;
+                    font-family: 'M PLUS Rounded 1c';
+                    word-wrap: break-word;
+                    max-width: 100%;
+                    font-weight: 500;
+                    flex:1;
+                }
+            }
+            &#right{
+                float: right;
+            }
+
+            &.arrow{
+                width:8%;
+                &:hover{
+                    background-color: #dfdfdf;
+                }
+                &.disable{
+                    i{
+                        color: darkgray;
+                    }
+                    &:hover{
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .show_ans_parent{
+        margin:1em auto;
+        width: 60%;
+        display: block;
+        p{
+            //margin: 1em;
+        }
+        .button{
+            display: block;
+            width: 20em;
+            margin: 5px auto;
+            //transform: translateX(5em);
+            text-align: center;
+            .show_ans{
+                display: inline-block;
+                &:active{
+                    box-shadow: none;
+                    background-color: whitesmoke;
+                }
+            }
+        }
+
+        a, p{
+            font-size: 24pt;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.main_form{
+    margin-top: 10px;
+    table.list{
+        position: absolute;
+        display:block;
+        margin: 5px;
+        left:50%;
+        transform: translateX(-50%);
+        font-size: 18pt;
+        //border-collapse: collapse;
+        td, th{
+            width: 12em;
+            padding: 0.2em;
+        }
+        th{
+            background-color: rgb(224, 49, 171);
+            color: white;
+            font-weight: 500;
+        }
+        td{
+            background-color: #eee;
+            &:nth-child(1){
+                background-color: rgb(255, 191, 252);
+            }
+            &:nth-child(2){
+                background-color: rgb(255, 211, 253);
+            }
+        }
+    }
+}

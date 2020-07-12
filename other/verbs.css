@@ -1,0 +1,26 @@
+.main_form {
+  margin-top: 10px; }
+  .main_form table.list {
+    position: absolute;
+    display: block;
+    margin: 5px 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18pt; }
+    .main_form table.list td, .main_form table.list th {
+      width: 12em;
+      padding: 0.2em; }
+    .main_form table.list th {
+      background-color: #f14a58;
+      color: white;
+      font-weight: 500; }
+    .main_form table.list td {
+      background-color: #eee; }
+      .main_form table.list td:nth-child(1) {
+        background: #f8b7b7; }
+      .main_form table.list td:nth-child(2) {
+        background: #fdd3d3; }
+      .main_form table.list td:nth-child(3) {
+        background: #fadddd; }
+
+/*# sourceMappingURL=verbs.css.map */

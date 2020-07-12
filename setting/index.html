@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <link rel="manifest" href="../favicon/site.webmanifest">
+        <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ff60a2">
+
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../style/jquery-ui.css">
+        <link rel="stylesheet" href="../style/common.css">
+        <link rel="stylesheet" href="setting.css">
+        <link rel="stylesheet" href="toggle.css">
+        <script src="../js/jquery.js"></script>
+        <script src="../js/jquery.cookie.js"></script>
+        <scirpt src="../js/jquery-ui.js"></scirpt>
+        <script src="../js/common.js"></script>
+        <script src="setting.js"></script>
+        <script src="https://kit.fontawesome.com/8c5042bb87.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.7/push.min.js"></script>
+        <title>Blossom | 設定</title>
+    </head>
+    <body>
+        <header class="main_header">
+            <a href="../" class="header_title">Blossom</a>
+
+            <ui class="header_menu">
+                <li class="header_menu_content"><a href="../"><i class="fas fa-home"></i> Home</a></li>
+                <li class="header_menu_content" id="learning_btn">
+                    <a href="#"><i class="fas fa-pen-alt"></i> Learning</a>
+                    <div class="dropdown">
+                        <a href="../learning/gakusyu/">学習</a>
+                        <a href="../learning/test/">テスト</a>
+                    </div>
+                </li>
+                <li class="header_menu_content selected"><a href="../setting"><i class="fas fa-sliders-h"></i> Setting</a></li>
+                <li class="header_menu_content" id="other_btn">
+                    <a href="#">Other</a>
+                    <div class="dropdown">
+                        <a href="../other/irregular_verbs.html">不規則動詞</a>
+                        <a href="../other/prefix.html">接頭辞</a>
+                        <a href="../other/suffix.html">接尾辞</a>
+                    </div>
+                </li>
+            </ui>
+        </header>
+
+        <div class="main_form">
+            <h1><i class="fas fa-sliders-h"></i> 設定</h1>
+            <br>
+            <div class="notice_setting">
+                <div class="fukusyu">
+                    <div class="subtitle">
+                        <h2>復習通知</h2>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle" class="toggle-input review_notice"/>
+                            <label for="toggle" class="toggle-label"></label>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p class="inline">テストから</p>
+                        <input type="number" value="60" class="review_time after_test" id="after_test" step="1" min="0"/>
+                        <p class="inline">分後</p>
+                    </div>
+                    <p class="note">※60～120分後がおすすめです</p>
+                </div>
+    
+                <br>
+                <hr>
+                <br>
+    
+                <div class="fukusyu">
+                    <div class="subtitle">
+                        <h2>学習通知</h2>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle" class="toggle-input study_notice"/>
+                            <label for="toggle" class="toggle-label"></label>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p class="inline">毎日</p>
+                        <input type="number" value="0" class="review_time study" id="study_h" step="1" max="23" min="0"/>
+                        <p class="inline">：</p>
+                        <input type="number" value="0" class="review_time study" id="study_m" step="1" max="59" min="0"/>
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="word_list">
+                    <h2>単語一覧</h2><br>
+                    <div class="list_parent">
+                        <div class="list parent">
+                            <p>カテゴリ</p>
+                            <select id="parent_list" size="8">
+                            </select>
+                            <br>
+                            <i class="fas fa-plus" id="add_set"></i>
+                            <i class="fas fa-trash" id="remove_set"></i>
+                        </div>
+                        <div class="list child">
+                            <p>単語</p>
+                            <select id="child_list" size="8">
+                            </select>
+                            <br>
+                            <i class="fas fa-plus word_btn" id="add_word"></i>
+                            <i class="fas fa-trash word_btn" id="remove_word"></i>
+                        </div>
+                        <div class="list edit">
+                            <p>カテゴリ名</p>
+                            <input type=text id="name">
+                            <p>単語</p>
+                            <input type=text id="word">
+                            <p>意味</p>
+                            <input type=text id="mean">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
