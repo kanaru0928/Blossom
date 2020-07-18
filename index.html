@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ff60a2">
+
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style/jquery-ui.css">
+        <link rel="stylesheet" href="style/common.css">
+        <link rel="stylesheet" href="index.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <scirpt src="js/jquery-ui.js"></scirpt>
+        <script src="js/common.js"></script>
+        <script src="index.js"></script>
+	    <script src="https://kit.fontawesome.com/8c5042bb87.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.7/push.min.js"></script>
+        <title>Blossom | ホーム</title>
+    </head>
+    <body>
+        <header class="main_header">
+            <a href="" class="header_title">Blossom</a>
+
+            <ui class="header_menu">
+                <li class="header_menu_content selected"><a href=""><i class="fas fa-home"></i> Home</a></li>
+                <li class="header_menu_content" id="learning_btn">
+                    <a href="#"><i class="fas fa-pen-alt"></i> Learning</a>
+                    <div class="dropdown">
+                        <a href="learning/gakusyu/">学習</a>
+                        <a href="learning/test/">テスト</a>
+                    </div>
+                </li>
+                <li class="header_menu_content"><a href="setting"><i class="fas fa-sliders-h"></i> Setting</a></li>
+                <li class="header_menu_content" id="other_btn">
+                    <a href="#">Other</a>
+                    <div class="dropdown">
+                        <a href="other/irregular_verbs.html">不規則動詞</a>
+                        <a href="other/prefix.html">接頭辞</a>
+                        <a href="other/suffix.html">接尾辞</a>
+                    </div>
+                </li>
+            </ui>
+        </header>
+
+        <div class="clock_parent">
+            <p class="clock text-center">現在時刻</p>
+        </div>
+        <div class="main_form">
+            <h1><i class="fas fa-home"></i> Home</h1>
+            <div class="home_words">
+                <div class="home_words_child got">
+                    <h2 class="got_words center">覚えた単語数</h2>
+                    <p class="words_count got">個</p>
+                    <a href="list.html" class="btn1 text-center list_btn"><i class="fas fa-list-ul"></i> 一覧を見る</a>
+                </div>
+                <div class="home_words_child wrong">
+                    <h2 class="wrong_words center">間違えた単語数</h2>
+                    <p class="words_count wrong">個</p>
+                    <a href="list.html" class="btn1 text-center list_btn"><i class="fas fa-list-ul"></i> 一覧を見る</a>
+                </div>
+            </div>
+            
+            <p class="first_inf text-center" id="sp_inf">スマートフォンは基本的に横画面をおすすめします。</p>
+            <p class="first_inf text-center" id="setting_inf">初めての方は、「Setting」から通知の設定をしてみましょう！</p>
+        </div>
+    </body>
+</html>

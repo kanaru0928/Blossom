@@ -1,0 +1,150 @@
+.select {
+  text-align: center;
+  margin: 15px auto; }
+  .select .switch {
+    display: inline-block;
+    position: relative;
+    font-size: 24pt;
+    font-weight: 400;
+    text-decoration: none;
+    color: #DA2BEE;
+    text-align: center; }
+
+.goback {
+  display: inline;
+  position: fixed;
+  margin: 10px;
+  right: 20%;
+  background-color: #C81EF1;
+  border-color: #C81EF1;
+  z-index: 10; }
+  .goback:hover {
+    color: #C81EF1; }
+    .goback:hover i {
+      color: #C81EF1; }
+
+div.main_form {
+  position: relative;
+  height: 100%; }
+  div.main_form .word_area_parent {
+    margin: 0 auto;
+    width: 60%;
+    height: 40vh;
+    text-align: center; }
+    div.main_form .word_area_parent div {
+      height: 100%;
+      bottom: 0;
+      display: inline-block; }
+      div.main_form .word_area_parent div i, div.main_form .word_area_parent div p {
+        vertical-align: middle;
+        display: inline; }
+      div.main_form .word_area_parent div i {
+        line-height: 40vh;
+        font-size: 28pt; }
+      div.main_form .word_area_parent div#left {
+        float: left; }
+      div.main_form .word_area_parent div.word_area {
+        display: inline-flex;
+        z-index: 0;
+        align-items: center;
+        border-radius: 10px;
+        margin: 0 auto;
+        width: 80%;
+        box-shadow: 0 0 5px 0 gray; }
+        div.main_form .word_area_parent div.word_area .word_area_child {
+          flex: 1;
+          display: inline;
+          height: unset; }
+          div.main_form .word_area_parent div.word_area .word_area_child p {
+            position: relative;
+            font-size: 4vw;
+            font-family: 'M PLUS Rounded 1c';
+            word-wrap: break-word;
+            max-width: 100%;
+            font-weight: 500; }
+        div.main_form .word_area_parent div.word_area i {
+          position: absolute;
+          font-size: 30vh;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          opacity: 0.7; }
+          div.main_form .word_area_parent div.word_area i.fa-circle {
+            color: red;
+            display: none; }
+          div.main_form .word_area_parent div.word_area i.fa-times {
+            color: blue;
+            display: none; }
+      div.main_form .word_area_parent div#right {
+        float: right; }
+      div.main_form .word_area_parent div.arrow {
+        width: 8%; }
+        div.main_form .word_area_parent div.arrow:hover {
+          background-color: #dfdfdf; }
+        div.main_form .word_area_parent div.arrow.disable i {
+          color: darkgray; }
+        div.main_form .word_area_parent div.arrow.disable:hover {
+          background-color: white; }
+  div.main_form .show_ans_parent {
+    margin: 1em auto;
+    width: 60%;
+    display: block; }
+    div.main_form .show_ans_parent table {
+      margin: 0 auto; }
+      div.main_form .show_ans_parent table tr td {
+        width: 20%;
+        height: 4em;
+        padding: 3px 10px;
+        text-align: center; }
+        div.main_form .show_ans_parent table tr td a {
+          display: block;
+          font-size: 18pt; }
+
+.overlay {
+  margin: 5%;
+  position: fixed;
+  display: none;
+  width: calc(100vw - 10%);
+  height: 80vh;
+  background: rgba(255, 255, 255, 0.8);
+  border: solid 5px #4B40EB;
+  border-radius: 7px;
+  top: 0;
+  left: 0;
+  z-index: 150; }
+  .overlay .main_form {
+    margin: 5em 20vw; }
+    .overlay .main_form h2 {
+      font-size: 30pt; }
+    .overlay .main_form .result {
+      text-align: center; }
+      .overlay .main_form .result > p {
+        font-family: 'M PLUS Rounded 1c';
+        font-size: 48pt;
+        font-weight: 700; }
+      .overlay .main_form .result .updated {
+        display: inline-block;
+        margin: 10px;
+        weight: 10em; }
+        .overlay .main_form .result .updated p {
+          font-size: 24pt;
+          padding-bottom: 4px; }
+        .overlay .main_form .result .updated.got_parent {
+          margin-right: 5%; }
+        .overlay .main_form .result .updated.wrong_parent {
+          margin-left: 5%; }
+        .overlay .main_form .result .updated .got {
+          border-bottom: solid 1px limegreen; }
+        .overlay .main_form .result .updated .wrong {
+          border-bottom: solid 1px red; }
+        .overlay .main_form .result .updated #wrong_word, .overlay .main_form .result .updated #got_word {
+          font-family: 'M PLUS Rounded 1c';
+          font-weight: 500;
+          font-size: 32pt; }
+    .overlay .main_form .btn1 {
+      float: right;
+      display: inline-block; }
+
+/*# sourceMappingURL=reading.css.map */

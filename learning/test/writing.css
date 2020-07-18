@@ -1,0 +1,144 @@
+.select {
+  text-align: center;
+  margin: 15px auto; }
+
+.goback {
+  display: inline;
+  position: fixed;
+  margin: 10px;
+  right: 20%;
+  background-color: #C81EF1;
+  border-color: #C81EF1;
+  z-index: 10; }
+  .goback:hover {
+    color: #C81EF1; }
+    .goback:hover i {
+      color: #C81EF1; }
+
+div.main_form {
+  position: relative;
+  height: 100%;
+  top: 5em; }
+  div.main_form .word_area_parent {
+    margin: 0 auto;
+    width: 60%;
+    height: 40vh;
+    text-align: center;
+    vertical-align: middle; }
+    div.main_form .word_area_parent div {
+      height: 100%;
+      display: inline-block; }
+      div.main_form .word_area_parent div i, div.main_form .word_area_parent div p {
+        display: inline; }
+      div.main_form .word_area_parent div i {
+        line-height: 40vh;
+        font-size: 28pt; }
+      div.main_form .word_area_parent div#left {
+        float: left; }
+      div.main_form .word_area_parent div.word_area {
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        max-width: 80%;
+        box-shadow: 0 0 5px 0 gray;
+        vertical-align: middle; }
+        div.main_form .word_area_parent div.word_area .word_area_child {
+          display: inline;
+          height: unset;
+          flex: 1; }
+          div.main_form .word_area_parent div.word_area .word_area_child p {
+            font-size: 4vw;
+            font-family: 'M PLUS Rounded 1c';
+            font-weight: 500; }
+            div.main_form .word_area_parent div.word_area .word_area_child p#japanese {
+              font-size: 3vw; }
+            div.main_form .word_area_parent div.word_area .word_area_child p#word_red {
+              color: #fd3434; }
+        div.main_form .word_area_parent div.word_area i {
+          position: absolute;
+          font-size: 30vh;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          opacity: 0.7; }
+          div.main_form .word_area_parent div.word_area i.fa-circle {
+            color: red;
+            display: none; }
+          div.main_form .word_area_parent div.word_area i.fa-times {
+            color: blue;
+            display: none; }
+      div.main_form .word_area_parent div#right {
+        float: right; }
+      div.main_form .word_area_parent div.arrow {
+        line-height: 40vh;
+        width: 8%; }
+        div.main_form .word_area_parent div.arrow:hover {
+          background-color: #dfdfdf; }
+        div.main_form .word_area_parent div.arrow.disable i {
+          color: darkgray; }
+        div.main_form .word_area_parent div.arrow.disable:hover {
+          background-color: white; }
+  div.main_form .show_ans_parent {
+    margin: 1em auto;
+    width: 60%;
+    display: block;
+    text-align: center; }
+    div.main_form .show_ans_parent * {
+      vertical-align: middle;
+      display: inline; }
+    div.main_form .show_ans_parent input {
+      font-size: 18pt;
+      width: 15em; }
+
+.overlay {
+  margin: 5%;
+  position: fixed;
+  display: none;
+  width: calc(100vw - 10%);
+  height: 80vh;
+  background: rgba(255, 255, 255, 0.8);
+  border: solid 5px #4B40EB;
+  border-radius: 7px;
+  top: 0;
+  left: 0;
+  z-index: 150; }
+  .overlay *:not(.btn1 *) {
+    box-shadow: 0 0 5px 0 white; }
+  .overlay .main_form {
+    margin: 5em 20vw; }
+    .overlay .main_form h2 {
+      font-size: 30pt; }
+    .overlay .main_form .result {
+      text-align: center; }
+      .overlay .main_form .result > p {
+        font-family: 'M PLUS Rounded 1c';
+        font-size: 48pt;
+        font-weight: 700; }
+      .overlay .main_form .result .updated {
+        display: inline-block;
+        margin: 10px;
+        weight: 10em; }
+        .overlay .main_form .result .updated p {
+          font-size: 24pt;
+          padding-bottom: 4px; }
+        .overlay .main_form .result .updated.got_parent {
+          margin-right: 5%; }
+        .overlay .main_form .result .updated.wrong_parent {
+          margin-left: 5%; }
+        .overlay .main_form .result .updated .got {
+          border-bottom: solid 1px limegreen; }
+        .overlay .main_form .result .updated .wrong {
+          border-bottom: solid 1px red; }
+        .overlay .main_form .result .updated #wrong_word, .overlay .main_form .result .updated #got_word {
+          font-family: 'M PLUS Rounded 1c';
+          font-weight: 500;
+          font-size: 32pt; }
+    .overlay .main_form .btn1 {
+      float: right;
+      display: inline-block; }
+
+/*# sourceMappingURL=writing.css.map */

@@ -1,0 +1,23 @@
+.list_parent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto; }
+  .list_parent table.list {
+    margin: 0 auto;
+    border-collapse: collapse; }
+    .list_parent table.list tr:nth-child(odd) {
+      background: whitesmoke; }
+    .list_parent table.list tr td {
+      text-decoration: none;
+      list-style: none;
+      padding: 5px; }
+      .list_parent table.list tr td.subtitle {
+        font-size: 24pt;
+        width: 6em; }
+        .list_parent table.list tr td.subtitle.custom {
+          color: #88005f; }
+      .list_parent table.list tr td .btn1 {
+        margin: 6px; }
+
+/*# sourceMappingURL=gakusyu.css.map */

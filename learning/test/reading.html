@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+        <link rel="manifest" href="../../favicon/site.webmanifest">
+        <link rel="mask-icon" href="../../favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ff60a2">
+
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../style/jquery-ui.css">
+        <link rel="stylesheet" href="../../style/common.css">
+        <link rel="stylesheet" href="reading.css">
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/jquery.cookie.js"></script>
+        <scirpt src="../../js/jquery-ui.js"></scirpt>
+        <script src="../../js/common.js"></script>
+        <script src="reading.js"></script>
+	    <script src="https://kit.fontawesome.com/8c5042bb87.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.7/push.min.js"></script>
+        <title>Blossom | テスト・読み</title>
+    </head>
+    <body>
+        <header class="main_header">
+            <a href="../../" class="header_title">Blossom</a>
+        </header>
+        
+        <a href="../test/" class="goback btn1"><i class="fas fa-chevron-circle-left"></i> 戻る</a>
+        
+        <div class="select">
+            <p class="switch"></p>
+        </div>
+        <div class="main_form">
+            <div class="word_area_parent">
+                <div id="left" class="arrow disable"><i class="fas fa-angle-left"></i></div>
+                <div class="word_area">
+                    <div class="word_area_child">
+                        <p id="word">Now loading</p><br>
+                        <p id="correct"></p>
+                    </div>
+                    <i class="far fa-circle" id="circle"></i>
+                    <i class="fas fa-times" id="times"></i>
+                </div>
+                <div id="right" class="arrow"><i class="fas fa-angle-right"></i></div>
+            </div>
+            
+            <div class="show_ans_parent">
+                <table>
+                    <tr><td><a class="btn1 choices" id="c1">選択肢1</a></td><td><a class="btn1 choices" id="c2">選択肢2</a></td></tr>
+                    <tr><td><a class="btn1 choices" id="c3">選択肢3</a></td><td><a class="btn1 choices" id="c4">選択肢4</a></td></tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="overlay">
+            <div class="main_form">
+                <h2>result</h2>
+                <div class="result">
+                    <p class="point">n/n</p>
+                    <div class="updated got_parent">
+                        <p class="got">覚えた単語</p>
+                        <p id="got_word">+n</p>
+                    </div>
+                    <div class="updated wrong_parent">
+                        <p class="wrong">間違えた単語 </p>
+                        <p id="wrong_word">+n</p>
+                    </div>
+                </div>
+                <a href="../test/" class="btn1"><i class="fas fa-chevron-circle-left"></i> 戻る</a>
+            </div>
+        </div>
+
+        <p class="toast" id="resulting">結果を処理中…</p>
+    </body>
+</html>

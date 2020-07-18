@@ -1,0 +1,94 @@
+.select {
+  text-align: center;
+  margin: 15px auto; }
+  .select .switch {
+    display: inline-block;
+    position: absolute;
+    font-size: 24pt;
+    font-weight: 400;
+    text-decoration: none; }
+    .select .switch.en_jp {
+      left: calc(45% - 3em);
+      box-shadow: black; }
+    .select .switch.jp_en {
+      right: calc(45% - 3em); }
+
+.goback {
+  display: inline;
+  position: fixed;
+  margin: 10px;
+  right: 20%;
+  background-color: #C81EF1;
+  border-color: #C81EF1;
+  z-index: 10; }
+  .goback:hover {
+    color: #C81EF1; }
+    .goback:hover i {
+      color: #C81EF1; }
+
+div.main_form {
+  position: relative;
+  height: 100%;
+  top: 5em; }
+  div.main_form .word_area_parent {
+    margin: 0 auto;
+    width: 60%;
+    height: 40vh;
+    text-align: center; }
+    div.main_form .word_area_parent div {
+      height: 100%;
+      bottom: 0;
+      display: inline-block; }
+      div.main_form .word_area_parent div i, div.main_form .word_area_parent div p {
+        vertical-align: middle;
+        display: inline; }
+      div.main_form .word_area_parent div i {
+        line-height: 40vh;
+        font-size: 28pt; }
+      div.main_form .word_area_parent div#left {
+        float: left; }
+      div.main_form .word_area_parent div.word_area {
+        display: inline-flex;
+        z-index: 0;
+        align-items: center;
+        border-radius: 10px;
+        margin: 0 auto;
+        width: 80%;
+        box-shadow: 0 0 5px 0 gray; }
+        div.main_form .word_area_parent div.word_area p {
+          position: relative;
+          font-size: 4vw;
+          font-family: 'M PLUS Rounded 1c';
+          word-wrap: break-word;
+          max-width: 100%;
+          font-weight: 500;
+          flex: 1; }
+      div.main_form .word_area_parent div#right {
+        float: right; }
+      div.main_form .word_area_parent div.arrow {
+        width: 8%; }
+        div.main_form .word_area_parent div.arrow:hover {
+          background-color: #dfdfdf; }
+        div.main_form .word_area_parent div.arrow.disable i {
+          color: darkgray; }
+        div.main_form .word_area_parent div.arrow.disable:hover {
+          background-color: white; }
+  div.main_form .show_ans_parent {
+    margin: 1em auto;
+    width: 60%;
+    display: block; }
+    div.main_form .show_ans_parent .button {
+      display: block;
+      width: 20em;
+      margin: 5px auto;
+      text-align: center; }
+      div.main_form .show_ans_parent .button .show_ans {
+        display: inline-block; }
+        div.main_form .show_ans_parent .button .show_ans:active {
+          box-shadow: none;
+          background-color: whitesmoke; }
+    div.main_form .show_ans_parent a, div.main_form .show_ans_parent p {
+      font-size: 24pt;
+      text-align: center; }
+
+/*# sourceMappingURL=reading.css.map */
