@@ -32,8 +32,13 @@
                 <li class="header_menu_content" id="learning_btn">
                     <a href="#"><i class="fas fa-pen-alt"></i> Learning</a>
                     <div class="dropdown">
+<<<<<<< HEAD
                         <a href="/learning/gakusyu/">学習</a>
                         <a href="/learning/test/">テスト</a>
+=======
+                        <a href="">学習</a>
+                        <a href="">テスト</a>
+>>>>>>> origin/master
                     </div>
                 </li>
                 <li class="header_menu_content"><a href="../setting/"><i class="fas fa-sliders-h"></i> Setting</a></li>

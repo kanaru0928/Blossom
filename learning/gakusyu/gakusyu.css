@@ -1,3 +1,9 @@
+.chekcbox--label {
+  width: 100%;
+  margin: 5px auto;
+  font-size: 18pt;
+  cursor: pointer; }
+
 .list_parent {
   position: absolute;
   left: 0;

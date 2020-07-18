@@ -5,7 +5,12 @@ var nextchar;
 var max_ind
 var key = new Audio('/item/keyboard.wav');
 
+var is_only = $.cookie("wronged_only") == "True";
+var record = {};
+var json_str = localStorage.getItem("record");
+
 $(function(){
+    record = JSON.parse(json_str);
     key.volume = 0.5;
     var get_str = window.location.search;
     var get = new Object;
@@ -83,6 +88,7 @@ function getwordset(name, f){
             for(let i = 0; i < data_en.length; i++){
                 data[i] = data_en[i].split(",");
             }
+            del_data(name);
             max_ind = data.length - 1
             update();
         };
@@ -92,11 +98,30 @@ function getwordset(name, f){
         var index = parseInt(name);
         if(tmp != null){
             data = tmp[index]['data'];
-            max_ind = data.length - 1;
         }else{
             data = [];
         }
+        del_data(name + 'c');
+        max_ind = data.length - 1;
         update();
+    }
+}
+
+function del_data(n){
+    if(is_only){
+        if(typeof record[n] == "undefined"){
+            return false;
+        }
+        var rc_str = [];
+        for(let i = 0; i < record[n].length; i++){
+            if(record[n][i][4])
+                rc_str.push(record[n][i][0]);
+        }
+        data = data.filter((v) => {return rc_str.indexOf(v[0]) == -1});
+    }
+    
+    if(!(data.length > 0)){
+        data = [["No data", "データがありません"]];
     }
 }
 
