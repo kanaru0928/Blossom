@@ -199,7 +199,7 @@ function check_h(h){
         check_h(h);
     }else{
         if($(".study_notice").prop('checked'))
-            localStorage.setItem("study_h", h);
+            localStorage.setItem("study_h", Number(h));
     }
 }
 function check_m(m){
@@ -217,7 +217,7 @@ function check_m(m){
         check_m(m);
     }else{
         if($(".study_notice").prop('checked'))
-            localStorage.setItem("study_m", m);
+            localStorage.setItem("study_m", Number(m));
     }
 }
 
