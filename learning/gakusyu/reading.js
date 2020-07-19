@@ -129,9 +129,10 @@ function del_data(n){
         }
         var rc_str = [];
         for(let i = 0; i < record[n].length; i++){
-            if(record[n][i][2] && record[n][i][3])
+            if((record[n][i][2] || record[n][i][2] === null) && (record[n][i][3] || record[n][i][3] === null))
                 rc_str.push(record[n][i][0]);
         }
+        console.log(rc_str);
         data = data.filter((v) => {return rc_str.indexOf(v[0]) == -1});
     }
     

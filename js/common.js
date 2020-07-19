@@ -7,18 +7,18 @@ timerID1 = setInterval('alerm()', 1000);
 $(function(){
     $("#learning_btn").hover(function () {
             // over
-            $("#learning_btn .dropdown").slideDown('fast');
+            $("#learning_btn .dropdown").stop().slideDown('fast');
         }, function () {
             // out
-            $("#learning_btn .dropdown").slideUp();
+            $("#learning_btn .dropdown").stop().slideUp();
         }
     );
     $("#other_btn").hover(function () {
             // over
-            $("#other_btn .dropdown").slideDown('fast');
+            $("#other_btn .dropdown").stop().slideDown('fast');
         }, function () {
             // out
-            $("#other_btn .dropdown").slideUp();
+            $("#other_btn .dropdown").stop().slideUp();
         }
     );
 });
