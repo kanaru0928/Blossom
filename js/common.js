@@ -39,7 +39,7 @@ function alerm(){
     var now = gettime();
     if(now[3].toString() == localStorage.getItem("study_h") && now[4].toString() == localStorage.getItem("study_m") && !flag){
         if(study_cflag != "True"){
-            Push.create(".English(仮)", {
+            Push.create("Blossom", {
                 body: "学習の時間です。",
                 icon: '/favicon/favicon.ico',
                 onclick: function(){
@@ -58,7 +58,7 @@ function alerm(){
         if(Math.floor(now[5] / 1000 / 60) == parseInt(after_test_c)){
             after_test_c = null;
             $.removeCookie("after_test", {path: "/"});
-            Push.create(".English(仮)", {
+            Push.create("Blossom", {
                 body: "復習の時間です。",
                 icon: '/favicon/favicon.ico',
                 onclick: function(){
