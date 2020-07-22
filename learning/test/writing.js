@@ -101,8 +101,8 @@ function update(){
 // 次の単語へ
 function next(){
     if(state < max_ind){
-        $("#write_area").val("");
         state++;
+        $("#write_area").val("");
         update();
     }else{
         result();
@@ -133,8 +133,8 @@ function corrected(){
     correct_sound.currentTime = 0;
     correct_sound.play();
     setTimeout(function(){
-        next();
         result_flag = true;
+        next();
         $("#circle").hide();
         $("#answer").html("");
     }, 2000);

@@ -63,7 +63,8 @@ function getwordset(name, f){
             for(let i = 0; i < data_en.length; i++){
                 data[i] = data_en[i].split(",");
             }
-            max_ind = data.length - 1
+
+            max_ind = data.length - 1;
             order = shuffle([...Array(max_ind + 1)].map((_, i)=>i));
             point = Array(max_ind + 1);
             name_g = get['name'];
