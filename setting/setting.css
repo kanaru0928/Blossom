@@ -68,13 +68,15 @@ p {
       .word_list .list_parent .list i:disabled {
         color: #aaa; }
 
-.io .import {
-  resize: none;
-  font-size: 14pt; }
-.io .error {
-  color: red;
-  font-size: 14pt;
-  display: inline;
-  display: none; }
+.io .io_child {
+  margin: 10px; }
+  .io .io_child .import {
+    resize: none;
+    font-size: 14pt; }
+  .io .io_child .error {
+    color: red;
+    font-size: 14pt;
+    display: inline;
+    display: none; }
 
 /*# sourceMappingURL=setting.css.map */
