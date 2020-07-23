@@ -170,6 +170,30 @@ $(function(){
         data[parent]['data'][child][1] = new_name;
         save();
     });
+
+    // IO
+    $('.import_btn').on('click', function () {
+        var import_data = $('.import').val();
+        var en_data = import_data.split(/\n/);
+        var add_data = new Array(en_data.length);
+        for(let i = 0; i < en_data.length; i++){
+            add_data[i] = en_data[i].split(',');
+        }
+
+        var json = {"name": "Imported"};
+        if(add_data == null){
+            $('.error').show();
+        }else{
+            $('.error').hide();
+            json['data'] = add_data;
+            var custom = localStorage.getItem("custom_word");
+            var custom_json = JSON.parse(custom);
+            custom_json.push(json);
+            var str = JSON.stringify(custom_json);
+            localStorage.setItem("custom_word", str);
+            document.location.reload();
+        }
+    });
 });
 
 function check_dis(){

@@ -1,92 +1,80 @@
 .main_form {
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 
-.fukusyu, .word_list {
+.setting {
   padding-left: 5vw;
   position: relative;
-  display: inline-block;
-}
-.fukusyu h2, .word_list h2 {
-  font-size: 22pt;
-  display: inline;
-  vertical-align: top;
-}
-.fukusyu .content, .word_list .content {
-  vertical-align: top;
-  display: inline-block;
-  margin-top: 3px;
-}
-.fukusyu .note, .word_list .note {
-  text-indent: 15em;
-  color: red;
-  font-size: 12pt;
-  padding-top: 0;
-}
+  display: inline-block; }
+  .setting h2 {
+    font-size: 22pt;
+    display: inline;
+    vertical-align: top; }
+  .setting .content {
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 3px; }
+  .setting .note {
+    text-indent: 15em;
+    color: red;
+    font-size: 12pt;
+    padding-top: 0; }
 
 .notice_setting {
   position: absolute;
   margin: auto;
   display: block;
-  width: 60%;
-}
+  width: 60%; }
 
 .review_time {
   font-size: 18pt;
-  display: inline-block;
-}
-.review_time.after_test {
-  width: 3em;
-}
-.review_time.study {
-  width: 2em;
-}
+  display: inline-block; }
+  .review_time.after_test {
+    width: 3em; }
+  .review_time.study {
+    width: 2em; }
 
 p {
-  font-size: 18pt;
-}
+  font-size: 18pt; }
 
 .subtitle {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .review_time:invalid {
-  border-color: red;
-}
+  border-color: red; }
 
 .word_list .list_parent {
-  display: flex;
-}
-.word_list .list_parent .list {
-  margin: 5px;
-  display: inline-block;
-}
-.word_list .list_parent .list p {
-  font-size: 20pt;
-}
-.word_list .list_parent .list select {
-  width: 10em;
-  font-size: 16pt;
-}
-.word_list .list_parent .list select option::selection {
-  background: violet;
-}
-.word_list .list_parent .list.edit {
-  margin-bottom: 20pt;
-}
-.word_list .list_parent .list.edit input {
-  font-size: 18pt;
-  display: block;
-  margin: 5px 0;
-}
-.word_list .list_parent .list i {
-  font-size: 20pt;
-  margin: 3px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-.word_list .list_parent .list i:disabled {
-  color: #aaa;
-}
+  display: flex; }
+  .word_list .list_parent .list {
+    margin: 5px;
+    display: inline-block; }
+    .word_list .list_parent .list p {
+      font-size: 20pt; }
+    .word_list .list_parent .list select {
+      width: 10em;
+      font-size: 16pt; }
+      .word_list .list_parent .list select option::selection {
+        background: violet; }
+    .word_list .list_parent .list.edit {
+      margin-bottom: 20pt; }
+      .word_list .list_parent .list.edit input {
+        font-size: 18pt;
+        display: block;
+        margin: 5px 0; }
+    .word_list .list_parent .list i {
+      font-size: 20pt;
+      margin: 3px;
+      margin-top: 10px;
+      cursor: pointer; }
+      .word_list .list_parent .list i:disabled {
+        color: #aaa; }
+
+.io .import {
+  resize: none;
+  font-size: 14pt; }
+.io .error {
+  color: red;
+  font-size: 14pt;
+  display: inline;
+  display: none; }
 
 /*# sourceMappingURL=setting.css.map */

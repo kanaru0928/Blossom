@@ -53,7 +53,7 @@
             <h1><i class="fas fa-sliders-h"></i> 設定</h1>
             <br>
             <div class="notice_setting">
-                <div class="fukusyu">
+                <div class="fukusyu setting">
                     <div class="subtitle">
                         <h2>復習通知</h2>
                         <div class="toggle-switch">
@@ -73,7 +73,7 @@
                 <hr>
                 <br>
     
-                <div class="fukusyu">
+                <div class="fukusyu setting">
                     <div class="subtitle">
                         <h2>学習通知</h2>
                         <div class="toggle-switch">
@@ -93,7 +93,7 @@
                 <hr>
                 <br>
 
-                <div class="word_list">
+                <div class="word_list setting">
                     <h2>単語一覧</h2><br>
                     <div class="list_parent">
                         <div class="list parent">
@@ -105,7 +105,7 @@
                             <i class="fas fa-trash" id="remove_set"></i>
                         </div>
                         <div class="list child">
-                            <p>単語</p>
+                            <p>単語 <span style="font-size: 14pt; color: red;">※4個以上推奨</span></p>
                             <select id="child_list" size="8">
                             </select>
                             <br>
@@ -121,6 +121,17 @@
                             <input type=text id="mean">
                         </div>
                     </div>
+                </div>
+                
+                <br>
+                <hr>
+                <br>
+
+                <div class="io setting">
+                    <h2>インポート</h2><br>
+                    <textarea class="import" cols="20" rows="7"></textarea><br>
+                    <input type="button" class="btn1 import_btn" value="インポート"/>
+                    <p class="error">※エラー</p>
                 </div>
             </div>
         </div>
