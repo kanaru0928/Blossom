@@ -124,6 +124,9 @@ function getwordset(name, f){
 
 function del_data(n){
     if(is_only){
+        if(record == null){
+            return false;            
+        }
         if(typeof record[n] == "undefined"){
             return false;
         }
