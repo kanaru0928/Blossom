@@ -173,8 +173,8 @@ $(function(){
 
     // IO
     $('.import_btn').on('click', function () {
-        var import_data = $('.import').val();
-        var en_data = import_data.split(/\n/);
+        var import_data = $('.import').val().trim();
+        var en_data = import_data.split(/\n|\t/);
         var add_data = new Array(en_data.length);
         for(let i = 0; i < en_data.length; i++){
             add_data[i] = en_data[i].split(',');
@@ -188,6 +188,9 @@ $(function(){
             json['data'] = add_data;
             var custom = localStorage.getItem("custom_word");
             var custom_json = JSON.parse(custom);
+            if(custom_json == null){
+                custom_json = [];
+            }
             custom_json.push(json);
             var str = JSON.stringify(custom_json);
             localStorage.setItem("custom_word", str);
