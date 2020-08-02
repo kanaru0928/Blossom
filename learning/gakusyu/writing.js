@@ -97,7 +97,12 @@ function getwordset(name, f){
         var tmp = JSON.parse(json);
         var index = parseInt(name);
         if(tmp != null){
-            data = tmp[index]['data'];
+            for(let i = 0; i < tmp.length; i++){
+                if(tmp['id'] == index){
+                    data = tmp[i]['data'];
+                    break;
+                }
+            }
         }else{
             data = [];
         }

@@ -76,7 +76,12 @@ function getwordset(name, f){
         var index = parseInt(name);
         name_g = index + "c";
         if(tmp != null){
-            data = tmp[index]['data'];
+            for(let i = 0; i < tmp.length; i++){
+                if(tmp['id'] == index){
+                    data = tmp[i]['data'];
+                    break;
+                }
+            }
             max_ind = data.length - 1;
         }else{
             data = [];
@@ -207,7 +212,7 @@ function result(){
             }
             array[name_g][i][switch_state ? 2 : 3] = point[i];
             if(point[i]){
-                if(array[name_g][i].slice(2, 5).every(v => v))
+                if(array[name_g][i].slice(2, 5).every(v => v || v == null))
                 got_add++;
             }
         }

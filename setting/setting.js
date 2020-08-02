@@ -107,7 +107,7 @@ $(function(){
     }
     $("#add_set").on('click', function () {
         if(data == null) data = [];
-        data.push({'name': 'New category', 'data': []});
+        data.push({'name': 'New category', 'id': get_max() + 1, 'data': []});
         $("#parent_list").append(`<option class='set'>New category</option>`);
         check_dis();
         save();
@@ -171,16 +171,16 @@ $(function(){
         save();
     });
 
-    // IO
+    // Import
     $('.import_btn').on('click', function () {
         var import_data = $('.import').val().trim();
-        var en_data = import_data.split(/\n|\t/);
+        var en_data = import_data.split(/\n/);
         var add_data = new Array(en_data.length);
         for(let i = 0; i < en_data.length; i++){
-            add_data[i] = en_data[i].split(',');
+            add_data[i] = en_data[i].split(/,|\t/);
         }
 
-        var json = {"name": "Imported"};
+        var json = {"name": "Imported", "id": get_max() + 1};
         if(add_data == null){
             $('.error').show();
         }else{
@@ -256,4 +256,15 @@ function approved(){
 
 function dinied(){
     alert("通知を拒否されています");
+}
+
+function get_max(){
+    let id = data[-1]['id'];
+    var res;
+    if(typeof id == "undefined"){
+        res = -1;
+    }else{
+        res = id;
+    }
+    return res;
 }

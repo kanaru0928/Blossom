@@ -75,7 +75,12 @@ function getwordset(name, f){
         var index = parseInt(name);
         name_g = index + 'c';
         if(tmp != null){
-            data = tmp[index]['data'];
+            for(let i = 0; i < tmp.length; i++){
+                if(tmp['id'] == index){
+                    data = tmp[i]['data'];
+                    break;
+                }
+            }
             max_ind = data.length - 1;
         }else{
             data = [];
@@ -195,7 +200,7 @@ function result(){
             array[name_g][i][4] = point[i]; // 結果を取得したデータに上書き
             
             if(point[i]){               // 新規正解数を算出
-                if(array[name_g][i].slice(2, 5).every(v => v))
+                if(array[name_g][i].slice(2, 5).every(v => v || v == null))
                 got_add++;
             }
         }
