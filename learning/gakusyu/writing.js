@@ -98,7 +98,7 @@ function getwordset(name, f){
         var index = parseInt(name);
         if(tmp != null){
             for(let i = 0; i < tmp.length; i++){
-                if(tmp['id'] == index){
+                if(tmp[i]['id'] == index){
                     data = tmp[i]['data'];
                     break;
                 }

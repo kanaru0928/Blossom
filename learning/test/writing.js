@@ -76,7 +76,7 @@ function getwordset(name, f){
         name_g = index + 'c';
         if(tmp != null){
             for(let i = 0; i < tmp.length; i++){
-                if(tmp['id'] == index){
+                if(tmp[i]['id'] == index){
                     data = tmp[i]['data'];
                     break;
                 }
@@ -219,7 +219,7 @@ function result(){
     for(d in array){
         for(let i = 0; i < array[d].length; i++){
             let a = array[d][i].slice(2, 5);
-            if(a.every(v => v == true)) got++;
+            if(a.every(v => v == true || v == null)) got++;
             else if(a.some(v => v == false && v != null)) wrong++;
         }
     }
