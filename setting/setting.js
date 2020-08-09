@@ -263,7 +263,7 @@ function get_max(){
     if(data.length == 0){
         res = -1;
     }else{
-        res = data[-1]['id'];
+        res = data[data.length - 1]['id'];
     }
     return res;
 }
