@@ -259,12 +259,11 @@ function dinied(){
 }
 
 function get_max(){
-    let id = data[-1]['id'];
     var res;
-    if(typeof id == "undefined"){
+    if(data.length == 0){
         res = -1;
     }else{
-        res = id;
+        res = data[-1]['id'];
     }
     return res;
 }
