@@ -260,10 +260,14 @@ function dinied(){
 
 function get_max(){
     var res;
-    if(data.length == 0){
+    var max_i = localStorage.getItem('max_index');
+    if(max_i != null){
+        res = Number(max_i);
+    }else if(data.length == 0){
         res = -1;
     }else{
         res = data[data.length - 1]['id'];
     }
+    localStorage.setItem('max_index', res + 1);
     return res;
 }
