@@ -7,3 +7,6 @@ Blossomは主に英単語の学習を目的としています。
 
 ## 特徴
 自由度の高いインターフェースや分単位で指定できる2つの復習機能により、自分に合った勉強のプランを実行するのに役立ちます。
+
+## 紹介動画
+[(http://img.youtube.com/vi/RRJ8-FGfUL4/sddefault.jpg)](https://youtu.be/RRJ8-FGfUL4)
